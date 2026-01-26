@@ -81,12 +81,12 @@ export async function POST(request: NextRequest) {
 
           <p style="margin-bottom: 32px;">
             <a href="https://www.linkedin.com/in/tlangi/" style="color: #ffcf00; text-decoration: none;">→ Follow on LinkedIn</a>
-            <br><br>
+              <br><br>
             <a href="https://www.youtube.com/watch?v=lwmURnsLQpE" style="color: #ffcf00; text-decoration: none;">→ Watch the TEDx Talk</a>
-          </p>
-          
+           </p>
+      
           <p style="font-size: 14px; color: #525252; margin-top: 40px;">
-            — Tlangelani Khosa (TK)<br>
+            — <a href="https://www.linkedin.com/in/tlangi/" style="color: #525252; text-decoration: underline;">Tlangelani Khosa (TK)</a><br>
             Founder, FlyQuest
           </p>
         </div>
