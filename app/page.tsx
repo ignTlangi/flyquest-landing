@@ -190,12 +190,8 @@ export default function FlyQuestLanding() {
           <div className="border-l-2 border-flyquest-gold pl-8 max-w-3xl">
             <p className="text-2xl md:text-3xl font-display leading-relaxed text-neutral-200">
               <span className="text-flyquest-gold">I've heard this story hundreds of times.</span> Students 
-              who couldn't progress because of:
-            </p>
-            <p className="text-2xl md:text-3xl font-display leading-relaxed text-neutral-200 mt-4 h-[1.5em]">
-              <TypewriterText />
-            </p>
-            <p className="text-2xl md:text-3xl font-display leading-relaxed text-neutral-200 mt-4">
+              who couldn't progress because of <span className="inline-block min-w-[280px] md:min-w-[320px]"><TypewriterText /></span>
+              <br />
               —not because they lacked talent or drive. The system failed them. And for those 
               who do make it through? The job market becomes another maze with no map.
             </p>
@@ -279,15 +275,29 @@ export default function FlyQuestLanding() {
                     the cracks for reasons that had nothing to do with their ability."
                   </p>
                   <p className="text-lg leading-relaxed text-neutral-400 mb-6">
-                    "You deserve the playbook. I'm making it."
+                    "You deserve the playbook. I'm making it yours."
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-flyquest-gold flex items-center justify-center">
                       <span className="font-display font-bold text-black text-lg">TK</span>
                     </div>
                     <div>
-                      <p className="font-display font-bold">Tlangelani Khosa (TK)</p>
-                      <p className="text-neutral-500 text-sm">Founder, FlyQuest</p>
+                      <a 
+                        href="https://www.linkedin.com/in/tlangi/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="font-display font-bold hover:text-flyquest-gold transition-colors"
+                      >
+                        Tlangelani Khosa (TK)
+                      </a>
+                      <a 
+                        href="https://www.linkedin.com/company/flyquestsa/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-neutral-500 text-sm hover:text-flyquest-gold transition-colors block"
+                      >
+                        Founder, FlyQuest
+                      </a>
                     </div>
                   </div>
                 </div>
