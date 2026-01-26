@@ -189,9 +189,14 @@ export default function FlyQuestLanding() {
           {/* The Human Context - with typewriter effect */}
           <div className="border-l-2 border-flyquest-gold pl-8 max-w-3xl">
             <p className="text-2xl md:text-3xl font-display leading-relaxed text-neutral-200">
-              I've heard this story hundreds of times. Students who couldn't progress because of{" "}
+              <span className="text-flyquest-gold">I've heard this story hundreds of times.</span> Students 
+              who couldn't progress because of:
+            </p>
+            <p className="text-2xl md:text-3xl font-display leading-relaxed text-neutral-200 mt-4 h-[1.5em]">
               <TypewriterText />
-              {" "}—not because they lacked talent or drive. The system failed them. And for those 
+            </p>
+            <p className="text-2xl md:text-3xl font-display leading-relaxed text-neutral-200 mt-4">
+              —not because they lacked talent or drive. The system failed them. And for those 
               who do make it through? The job market becomes another maze with no map.
             </p>
           </div>
