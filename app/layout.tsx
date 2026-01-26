@@ -16,23 +16,31 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "FlyQuest | The Navigation System You Never Got",
+  title: "FlyQuest | Education is free. Learning is priceless.",
   description:
-    "FlyQuest bridges the gap between higher education and professional integration. ATS-optimised CV frameworks, career roadmaps, and transparent industry insights for South African students and graduates.",
+    "Bridging the gap between higher education and professional integration. Tactical frameworks, ATS-optimised CV systems, and transparent mentorship for South African students.",
   keywords: [
     "career development",
     "graduate support",
     "CV optimisation",
-    "South Africa jobs",
-    "student resources",
-    "ATS CV",
+    "South Africa education",
+    "student mentorship",
+    "ATS CV template",
     "career navigation",
+    "FlyQuest",
   ],
-  authors: [{ name: "TK", url: "https://www.linkedin.com/in/tkmatshaba/" }],
+  authors: [{ name: "Tlangelani Khosa (TK)", url: "https://www.linkedin.com/in/tlangi/" }],
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     title: "FlyQuest | Education is free. Learning is priceless.",
     description:
-      "The navigation system you never got. Career frameworks for students stuck between graduation and getting hired.",
+      "The navigation system the traditional education system left out. Build your roadmap from graduation to professional integration.",
+    url: "https://www.flyquest.co.za",
+    siteName: "FlyQuest",
     type: "website",
     locale: "en_ZA",
   },
@@ -40,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FlyQuest | Education is free. Learning is priceless.",
     description:
-      "The navigation system you never got. Career frameworks for students stuck between graduation and getting hired.",
+      "Bridging the gap between higher education and professional integration for South African students.",
   },
   robots: {
     index: true,
