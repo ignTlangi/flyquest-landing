@@ -9,7 +9,7 @@ export default function GuideCard({ guide }: GuideCardProps) {
   return (
     <Link
       href={`/playbook/${guide.slug}`}
-      className="group block p-6 bg-white/5 rounded-lg border border-white/10 hover:border-[#ffcf00] transition"
+      className="group block p-6 bg-white/5 rounded-lg border border-white/10 hover:border-[#ffcf00] transition cursor-pointer"
     >
       <div className="flex items-center justify-between mb-3">
         <span className="text-sm text-[#ffcf00] font-medium">
@@ -36,7 +36,7 @@ export default function GuideCard({ guide }: GuideCardProps) {
             day: 'numeric'
           })}
         </span>
-        <span className="text-[#ffcf00] group-hover:translate-x-1 transition">
+        <span className="text-[#ffcf00] group-hover:translate-x-1 transition inline-block">
           Read →
         </span>
       </div>
