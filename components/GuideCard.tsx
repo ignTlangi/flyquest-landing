@@ -1,4 +1,6 @@
-import Link from 'next/link';
+'use client';
+
+import { useRouter } from 'next/navigation';
 import { GuideMetadata } from '@/types/guide';
 
 interface GuideCardProps {
@@ -6,9 +8,15 @@ interface GuideCardProps {
 }
 
 export default function GuideCard({ guide }: GuideCardProps) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/playbook/${guide.slug}`);
+  };
+
   return (
-    <Link
-      href={`/playbook/${guide.slug}`}
+    <div
+      onClick={handleClick}
       className="group block p-6 bg-white/5 rounded-lg border border-white/10 hover:border-[#ffcf00] transition cursor-pointer"
     >
       <div className="flex items-center justify-between mb-3">
@@ -40,6 +48,6 @@ export default function GuideCard({ guide }: GuideCardProps) {
           Read →
         </span>
       </div>
-    </Link>
+    </div>
   );
 }

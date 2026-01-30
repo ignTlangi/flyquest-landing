@@ -63,11 +63,11 @@ export default function GuideLayout({ metadata, children }: GuideLayoutProps) {
           <p className="text-gray-300 mb-4">
             Just read this guide on {metadata.title.toLowerCase()}. If you're navigating {metadata.category.toLowerCase()}, check it out:
           </p>
-          <code className="block p-4 bg-black/50 rounded text-sm">
+          <div className="p-4 bg-black/50 rounded font-mono text-sm">
             https://flyquest.co.za/playbook/{metadata.slug}
             <br /><br />
             #SouthAfricanStudents #FlyQuest
-          </code>
+          </div>
         </div>
       </div>
     </div>
