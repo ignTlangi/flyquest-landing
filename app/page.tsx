@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 // Typewriter effect for cycling through pain points
 function TypewriterText() {
@@ -86,41 +89,7 @@ export default function FlyQuestLanding() {
       {/* Noise Texture Overlay */}
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-50 noise-overlay" aria-hidden="true" />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-40 px-6 md:px-12 lg:px-24 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm border-b border-neutral-900/50">
-        <Link href="/" className="text-flyquest-gold font-display text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity">
-          FlyQuest
-        </Link>
-        <div className="flex items-center gap-6">
-          <Link 
-            href="/about" 
-            className="text-neutral-400 hover:text-flyquest-gold transition-colors font-mono text-sm"
-          >
-            About
-          </Link>
-          <Link 
-            href="/cv" 
-            className="bg-flyquest-gold/10 border border-flyquest-gold/50 text-flyquest-gold px-4 py-2 transition-all hover:bg-flyquest-gold hover:text-black font-mono text-sm flex items-center gap-2"
-          >
-            CV Template
-            <span className="bg-flyquest-gold text-black text-xs px-1.5 py-0.5 font-bold">FREE</span>
-          </Link>
-          <Link 
-            href="/speak" 
-            className="text-neutral-400 hover:text-flyquest-gold transition-colors font-mono text-sm"
-          >
-            Speaking
-          </Link>
-          <a
-            href="https://www.linkedin.com/in/tlangi/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-neutral-400 hover:text-flyquest-gold transition-colors font-mono text-sm hidden sm:block"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-24 pb-32 pt-32">
@@ -305,26 +274,28 @@ export default function FlyQuestLanding() {
                     "You deserve the playbook. I'm making it yours."
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-flyquest-gold flex items-center justify-center">
-                      <span className="font-display font-bold text-black text-lg">TK</span>
+                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                      <Image
+                        src="/images/flyquest-tk-headshot-head.jpg"
+                        alt="TK - Tlangelani Khosa"
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
                       <a 
                         href="https://www.linkedin.com/in/tlangi/" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="font-display font-bold hover:text-flyquest-gold transition-colors"
+                        className="font-display font-bold hover:text-flyquest-gold transition-colors flex items-center gap-1"
                       >
                         Tlangelani Khosa (TK)
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
                       </a>
-                      <a 
-                        href="https://www.linkedin.com/company/flyquestsa/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-neutral-500 text-sm hover:text-flyquest-gold transition-colors block"
-                      >
-                        Founder, FlyQuest
-                      </a>
+                      <p className="text-neutral-500 text-sm">Founder, FlyQuest</p>
                     </div>
                   </div>
                 </div>
@@ -519,35 +490,7 @@ export default function FlyQuestLanding() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 md:px-12 lg:px-24 py-12 border-t border-neutral-900">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-6">
-            <span className="text-flyquest-gold font-display text-xl font-bold">FlyQuest</span>
-            <span className="text-neutral-600 text-sm">© 2025</span>
-          </div>
-
-          <div className="flex items-center gap-8">
-            <Link href="/about" className="text-neutral-500 hover:text-flyquest-gold transition-colors text-sm font-mono">
-              About
-            </Link>
-            <Link href="/cv" className="text-neutral-500 hover:text-flyquest-gold transition-colors text-sm font-mono">
-              CV
-            </Link>
-            <Link href="/speak" className="text-neutral-500 hover:text-flyquest-gold transition-colors text-sm font-mono">
-              Speaking
-            </Link>
-            <a
-              href="https://www.linkedin.com/in/tlangi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-neutral-500 hover:text-flyquest-gold transition-colors text-sm font-mono"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

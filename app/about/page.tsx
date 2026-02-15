@@ -1,6 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export default function AboutPage() {
   return (
@@ -8,44 +11,10 @@ export default function AboutPage() {
       {/* Noise Texture Overlay */}
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-50 noise-overlay" aria-hidden="true" />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-40 px-6 md:px-12 lg:px-24 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm border-b border-neutral-900/50">
-        <Link href="/" className="text-flyquest-gold font-display text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity">
-          FlyQuest
-        </Link>
-        <div className="flex items-center gap-6">
-          <Link 
-            href="/about" 
-            className="text-flyquest-gold transition-colors font-mono text-sm"
-          >
-            About
-          </Link>
-          <Link 
-            href="/cv" 
-            className="bg-flyquest-gold/10 border border-flyquest-gold/50 text-flyquest-gold px-4 py-2 transition-all hover:bg-flyquest-gold hover:text-black font-mono text-sm flex items-center gap-2"
-          >
-            CV Template
-            <span className="bg-flyquest-gold text-black text-xs px-1.5 py-0.5 font-bold">FREE</span>
-          </Link>
-          <Link 
-            href="/speak" 
-            className="text-neutral-400 hover:text-flyquest-gold transition-colors font-mono text-sm"
-          >
-            Speaking
-          </Link>
-          <a
-            href="https://www.linkedin.com/in/tlangi/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-neutral-400 hover:text-flyquest-gold transition-colors font-mono text-sm hidden sm:block"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="relative px-6 md:px-12 lg:px-24 pt-32 pb-16">
+      <section className="relative px-6 md:px-12 lg:px-24 pt-28 md:pt-32 pb-16">
         <div className="max-w-4xl">
           <p className="text-flyquest-gold font-mono text-sm tracking-widest uppercase mb-6">
             About
@@ -64,19 +33,24 @@ export default function AboutPage() {
       {/* Main Content */}
       <section className="relative px-6 md:px-12 lg:px-24 py-16 border-t border-neutral-900">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-12">
-            {/* Photo Placeholder */}
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+            {/* Photo */}
             <div className="flex-shrink-0">
-              <div className="w-48 h-48 md:w-64 md:h-64 bg-flyquest-gold flex items-center justify-center">
-                <span className="font-display font-bold text-black text-6xl md:text-7xl">TK</span>
+              <div className="w-48 h-48 md:w-64 md:h-64 overflow-hidden">
+                <Image
+                  src="/images/flyquest-tk-headshot-head.jpg"
+                  alt="TK - Tlangelani Khosa"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
             {/* Bio */}
             <div className="space-y-6 text-neutral-300 text-lg leading-relaxed">
               <p>
-                In 2021, I was rejected from every university I applied to in South Africa. 
-                Not because I wasn't capable — because there simply wasn't room.
+                In 2021, I was rejected from every university I applied to in South Africa.
               </p>
 
               <p>
@@ -110,8 +84,7 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-neutral-300 text-lg leading-relaxed">
             <p className="text-2xl md:text-3xl font-display text-white leading-relaxed">
-              I'm not here to build a business empire. I'm here because I remember what it felt like 
-              to have no one in my corner.
+              I remember what it felt like to have no one in my corner.
             </p>
 
             <p>
@@ -200,9 +173,10 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-12 p-6 bg-black border border-neutral-800">
-            <p className="text-flyquest-gold font-mono text-sm mb-4">THE PHILOSOPHY</p>
-            <p className="text-xl text-white font-display italic">
-              "Education is free. Learning is priceless."
+            <p className="text-flyquest-gold font-mono text-sm mb-4">WHAT I BELIEVE</p>
+            <p className="text-xl text-white font-display leading-relaxed">
+              "There is no lack of answers in the world. But there is a clear shortage of people 
+              willing to ask the questions."
             </p>
           </div>
         </div>
@@ -299,37 +273,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 md:px-12 lg:px-24 py-12 border-t border-neutral-900">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-6">
-            <Link href="/" className="text-flyquest-gold font-display text-xl font-bold hover:opacity-80 transition-opacity">
-              FlyQuest
-            </Link>
-            <span className="text-neutral-600 text-sm">© 2025</span>
-          </div>
-
-          <div className="flex items-center gap-8">
-            <Link href="/about" className="text-flyquest-gold transition-colors text-sm font-mono">
-              About
-            </Link>
-            <Link href="/cv" className="text-neutral-500 hover:text-flyquest-gold transition-colors text-sm font-mono">
-              CV
-            </Link>
-            <Link href="/speak" className="text-neutral-500 hover:text-flyquest-gold transition-colors text-sm font-mono">
-              Speaking
-            </Link>
-            <a
-              href="https://www.linkedin.com/in/tlangi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-neutral-500 hover:text-flyquest-gold transition-colors text-sm font-mono"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

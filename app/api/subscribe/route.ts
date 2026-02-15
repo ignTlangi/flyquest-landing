@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
           <h1 style="color: #ffcf00; font-size: 28px; margin-bottom: 24px;">Welcome to FlyQuest</h1>
           
           <p style="font-size: 16px; line-height: 1.6; color: #e5e5e5; margin-bottom: 20px;">
-            You just joined a waitlist of students and graduates who are done waiting for permission to succeed.
+            You just joined a community of students and graduates who are done waiting for permission to succeed.
           </p>
           
           <p style="font-size: 16px; line-height: 1.6; color: #a3a3a3; margin-bottom: 20px;">
@@ -55,19 +55,17 @@ export async function POST(request: NextRequest) {
             Just practical insights, real frameworks, and the playbook the education system never gave you.
           </p>
 
-          <p style="font-size: 16px; line-height: 1.6; color: #a3a3a3; margin-bottom: 20px;">
-            We're building this alongside you — your feedback, your questions, your experiences will shape what FlyQuest becomes. 
-            When we launch, you'll be first to know.
-          </p>
-          
-          <div style="border-left: 3px solid #ffcf00; padding-left: 20px; margin: 32px 0;">
-            <p style="font-size: 14px; color: #ffffff; font-style: italic; margin: 0;">
-              "Education is free. Learning is priceless."
+          <div style="background-color: #171717; border: 1px solid #262626; padding: 24px; margin: 24px 0;">
+            <p style="font-size: 14px; color: #ffcf00; margin: 0 0 12px 0; font-weight: bold;">START HERE:</p>
+            <p style="margin: 0;">
+              <a href="https://flyquest.co.za/cv" style="color: #ffcf00; text-decoration: none; font-size: 16px;">
+                → Download the free CV Template
+              </a>
             </p>
           </div>
 
           <p style="font-size: 16px; line-height: 1.6; color: #a3a3a3; margin-bottom: 20px;">
-            In the meantime, if you want to see the journey unfold in real time:
+            If you want to see the journey unfold in real time:
           </p>
 
           <p style="margin-bottom: 32px;">
@@ -77,8 +75,9 @@ export async function POST(request: NextRequest) {
           </p>
           
           <p style="font-size: 14px; color: #525252; margin-top: 40px;">
-            — Tlangelani Khosa (TK)<br>
-            Founder, FlyQuest
+            — TK<br>
+            Founder, FlyQuest<br>
+            <a href="mailto:tlangi@flyquest.co.za" style="color: #525252;">tlangi@flyquest.co.za</a>
           </p>
         </div>
       `,

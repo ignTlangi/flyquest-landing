@@ -51,10 +51,15 @@ export async function POST(request: NextRequest) {
           </p>
 
           <div style="background-color: #171717; border: 1px solid #262626; padding: 24px; margin: 24px 0;">
-            <p style="font-size: 14px; color: #ffcf00; margin: 0 0 12px 0; font-weight: bold;">DOWNLOAD YOUR TEMPLATE:</p>
+            <p style="font-size: 14px; color: #ffcf00; margin: 0 0 12px 0; font-weight: bold;">DOWNLOAD YOUR TEMPLATES:</p>
+            <p style="margin: 0 0 12px 0;">
+              <a href="https://flyquest.co.za/downloads/FlyQuest-CV-Template-General.docx" style="color: #ffcf00; text-decoration: none; font-size: 16px;">
+                → General CV Template (Word)
+              </a>
+            </p>
             <p style="margin: 0;">
-              <a href="https://docs.google.com/document/d/YOUR_TEMPLATE_ID/copy" style="color: #ffcf00; text-decoration: none; font-size: 16px;">
-                → Google Docs Version (click to make a copy)
+              <a href="https://flyquest.co.za/downloads/FlyQuest-CV-Template-Tech.docx" style="color: #ffcf00; text-decoration: none; font-size: 16px;">
+                → Tech/IT CV Template (Word)
               </a>
             </p>
           </div>
@@ -67,7 +72,7 @@ export async function POST(request: NextRequest) {
             <li>Keep it to 1-2 pages max</li>
             <li>Use keywords from the job description</li>
             <li>Quantify your achievements where possible</li>
-            <li>Remove the "References available on request" line — it's outdated</li>
+            <li>Save as PDF when submitting (FirstName_LastName_CV.pdf)</li>
           </ul>
 
           <div style="border-left: 3px solid #ffcf00; padding-left: 20px; margin: 32px 0;">
@@ -78,15 +83,16 @@ export async function POST(request: NextRequest) {
               Book a CV Clarity Call and get a detailed video breakdown tailored to your target role.
             </p>
             <p style="margin: 16px 0 0 0;">
-              <a href="https://flyquest.co.za/services" style="color: #ffcf00; text-decoration: none;">
+              <a href="https://flyquest.co.za/cv" style="color: #ffcf00; text-decoration: none;">
                 Learn more →
               </a>
             </p>
           </div>
           
           <p style="font-size: 14px; color: #525252; margin-top: 40px;">
-            — Tlangelani Khosa (TK)<br>
-            Founder, FlyQuest
+            — TK<br>
+            Founder, FlyQuest<br>
+            <a href="mailto:tlangi@flyquest.co.za" style="color: #525252;">tlangi@flyquest.co.za</a>
           </p>
         </div>
       `,
