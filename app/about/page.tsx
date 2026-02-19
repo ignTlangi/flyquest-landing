@@ -20,28 +20,32 @@ export default function AboutPage() {
             About
           </p>
 
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight mb-8">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight mb-6">
             Hey, I'm TK.
           </h1>
 
-          <p className="text-neutral-400 text-xl md:text-2xl max-w-2xl leading-relaxed">
+          <p className="text-neutral-400 text-xl md:text-2xl max-w-2xl leading-relaxed mb-4">
             Software Engineer. TEDx Speaker. Someone who figured out the system by breaking through it.
+          </p>
+
+          <p className="text-neutral-500 text-lg max-w-2xl">
+            But that's certainly not how it started.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="relative px-6 md:px-12 lg:px-24 py-16 border-t border-neutral-900">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12">
-            {/* Photo */}
-            <div className="flex-shrink-0">
-              <div className="w-48 h-48 md:w-64 md:h-64 overflow-hidden">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+            {/* Photo - Larger on desktop */}
+            <div className="flex-shrink-0 mx-auto lg:mx-0">
+              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden">
                 <Image
                   src="/images/flyquest-tk-headshot-head.jpg"
                   alt="TK - Tlangelani Khosa"
-                  width={256}
-                  height={256}
+                  width={384}
+                  height={384}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -49,7 +53,7 @@ export default function AboutPage() {
 
             {/* Bio */}
             <div className="space-y-6 text-neutral-300 text-lg leading-relaxed">
-              <p>
+              <p className="text-2xl md:text-3xl font-display text-white leading-snug">
                 In 2021, I was rejected from every university I applied to in South Africa.
               </p>
 
@@ -68,7 +72,7 @@ export default function AboutPage() {
               <p>
                 Along the way, I shared my journey publicly on LinkedIn. Not because I had it figured 
                 out, but because I knew other students were going through the same thing and feeling 
-                alone. That community grew to over <span className="text-white">10,000 people</span>.
+                alone. That community grew to over <span className="text-white font-bold">10,000 people</span>.
               </p>
             </div>
           </div>

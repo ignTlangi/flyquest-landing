@@ -12,7 +12,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-24 py-4 md:py-6 flex justify-between items-center bg-black border-b border-neutral-800">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-24 py-4 md:py-6 flex justify-between items-center bg-black border-b border-neutral-700">
         <Link 
           href="/" 
           className="text-flyquest-gold font-display text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"

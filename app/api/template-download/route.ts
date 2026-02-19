@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
               Book a CV Clarity Call and get a detailed video breakdown tailored to your target role.
             </p>
             <p style="margin: 16px 0 0 0;">
-              <a href="https://flyquest.co.za/cv" style="color: #ffcf00; text-decoration: none;">
+              <a href="https://flyquest.co.za/cv#paid" style="color: #ffcf00; text-decoration: none;">
                 Learn more →
               </a>
             </p>

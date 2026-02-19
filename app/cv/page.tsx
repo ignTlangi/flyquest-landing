@@ -135,20 +135,68 @@ export default function CVPage() {
               </form>
             </div>
 
-            {/* Template Preview */}
+            {/* Template Preview - Blurred CV */}
             <div className="relative">
-              <div className="bg-neutral-900 border border-neutral-800 p-8 aspect-[3/4] flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-flyquest-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-flyquest-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
+              <div className="bg-white p-6 md:p-8 aspect-[3/4] overflow-hidden relative">
+                {/* Fake CV Content - Blurred */}
+                <div className="blur-[6px] select-none pointer-events-none">
+                  {/* Header */}
+                  <div className="border-b-2 border-neutral-300 pb-4 mb-4">
+                    <div className="h-6 bg-neutral-800 w-48 mb-2"></div>
+                    <div className="flex gap-4 text-xs">
+                      <div className="h-3 bg-neutral-400 w-32"></div>
+                      <div className="h-3 bg-neutral-400 w-24"></div>
+                      <div className="h-3 bg-neutral-400 w-28"></div>
+                    </div>
                   </div>
-                  <p className="text-neutral-500 font-mono text-sm">FlyQuest CV Template</p>
-                  <p className="text-neutral-600 text-xs mt-2">Word Document (.docx)</p>
+                  
+                  {/* Education Section */}
+                  <div className="mb-4">
+                    <div className="h-4 bg-neutral-800 w-24 mb-2"></div>
+                    <div className="h-3 bg-neutral-500 w-full mb-1"></div>
+                    <div className="h-3 bg-neutral-400 w-3/4 mb-1"></div>
+                    <div className="h-3 bg-neutral-400 w-1/2"></div>
+                  </div>
+
+                  {/* Experience Section */}
+                  <div className="mb-4">
+                    <div className="h-4 bg-neutral-800 w-28 mb-2"></div>
+                    <div className="h-3 bg-neutral-500 w-full mb-1"></div>
+                    <div className="h-3 bg-neutral-400 w-5/6 mb-1"></div>
+                    <div className="h-3 bg-neutral-400 w-full mb-1"></div>
+                    <div className="h-3 bg-neutral-400 w-2/3"></div>
+                  </div>
+
+                  {/* Skills Section */}
+                  <div className="mb-4">
+                    <div className="h-4 bg-neutral-800 w-20 mb-2"></div>
+                    <div className="flex flex-wrap gap-2">
+                      <div className="h-5 bg-neutral-300 w-16 rounded"></div>
+                      <div className="h-5 bg-neutral-300 w-20 rounded"></div>
+                      <div className="h-5 bg-neutral-300 w-14 rounded"></div>
+                      <div className="h-5 bg-neutral-300 w-18 rounded"></div>
+                      <div className="h-5 bg-neutral-300 w-12 rounded"></div>
+                    </div>
+                  </div>
+
+                  {/* Projects Section */}
+                  <div>
+                    <div className="h-4 bg-neutral-800 w-24 mb-2"></div>
+                    <div className="h-3 bg-neutral-500 w-full mb-1"></div>
+                    <div className="h-3 bg-neutral-400 w-4/5 mb-1"></div>
+                    <div className="h-3 bg-neutral-400 w-full"></div>
+                  </div>
+                </div>
+
+                {/* Overlay with CTA */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center pb-8">
+                  <div className="text-center">
+                    <p className="text-white font-display font-bold text-lg mb-2">FlyQuest CV Template</p>
+                    <p className="text-neutral-400 text-sm">Enter your email to unlock</p>
+                  </div>
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white text-black font-display font-bold px-4 py-2 text-sm">
+              <div className="absolute -bottom-4 -right-4 bg-flyquest-gold text-black font-display font-bold px-4 py-2 text-sm">
                 FREE
               </div>
             </div>
@@ -209,7 +257,7 @@ export default function CVPage() {
       </section>
 
       {/* Paid Service Section */}
-      <section className="relative px-6 md:px-12 lg:px-24 py-20 bg-gradient-to-b from-black via-neutral-950 to-black">
+      <section id="paid" className="relative px-6 md:px-12 lg:px-24 py-20 bg-gradient-to-b from-black via-neutral-950 to-black scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
