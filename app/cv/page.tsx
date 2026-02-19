@@ -50,8 +50,8 @@ export default function CVPage() {
       <section className="relative px-6 md:px-12 lg:px-24 pt-28 md:pt-32 pb-20">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 bg-flyquest-gold/10 border border-flyquest-gold/30 px-4 py-2 mb-6">
-            <span className="w-2 h-2 bg-flyquest-gold rounded-full animate-pulse"></span>
-            <span className="text-flyquest-gold font-mono text-sm">Now accepting bookings</span>
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="text-green-500 font-mono text-sm">Now accepting bookings</span>
           </div>
 
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight mb-8">
@@ -138,17 +138,17 @@ export default function CVPage() {
             {/* Template Preview - Actual CV Image Blurred */}
             <div className="relative">
               <div className="bg-white aspect-[3/4] overflow-hidden relative select-none">
-                {/* Actual CV Preview - Blurred */}
+                {/* Actual CV Preview - Light blur to show structure */}
                 <img 
                   src="/images/cv-preview.webp"
                   alt="CV Template Preview"
-                  className="w-full h-full object-cover object-top blur-[8px] scale-105 pointer-events-none"
+                  className="w-full h-full object-cover object-top blur-[3px] pointer-events-none"
                   draggable="false"
                   onContextMenu={(e) => e.preventDefault()}
                 />
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 flex items-end justify-center pb-8">
+                {/* Gradient Overlay - lighter at top to show content */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center pb-8">
                   <div className="text-center px-4">
                     <p className="text-white font-display font-bold text-xl mb-2">FlyQuest CV Template</p>
                     <p className="text-neutral-300 text-sm">Enter your email to unlock</p>
