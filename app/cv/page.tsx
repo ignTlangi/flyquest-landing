@@ -49,7 +49,7 @@ export default function CVPage() {
       {/* Hero Section */}
       <section className="relative px-6 md:px-12 lg:px-24 pt-28 md:pt-32 pb-20">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-flyquest-gold/10 border border-flyquest-gold/30 px-4 py-2 mb-6">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 px-4 py-2 mb-6">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
             <span className="text-green-500 font-mono text-sm">Now accepting bookings</span>
           </div>
@@ -455,7 +455,7 @@ export default function CVPage() {
                 "TK's feedback was incredibly detailed and specific. He pointed out things I never would have noticed. 
                 Within two weeks of updating my CV, I landed three interviews."
               </p>
-              <p className="text-neutral-500 text-sm">— Coming soon</p>
+              <p className="text-neutral-500 text-sm">— Mogau Sehlapelo</p>
             </div>
 
             <div className="bg-neutral-950 border border-neutral-800 p-6 text-left">
@@ -470,12 +470,12 @@ export default function CVPage() {
                 "I was sending out applications for months with no response. After implementing TK's suggestions, 
                 I finally understood what I was doing wrong. Game changer."
               </p>
-              <p className="text-neutral-500 text-sm">— Coming soon</p>
+              <p className="text-neutral-500 text-sm">— Shingai Dzino</p>
             </div>
           </div>
 
           <p className="text-neutral-600 text-sm mt-6">
-            Real testimonials from real students — coming as we help more people.
+            Reviews from students who transformed their job search.
           </p>
         </div>
       </section>
