@@ -135,64 +135,23 @@ export default function CVPage() {
               </form>
             </div>
 
-            {/* Template Preview - Blurred CV */}
+            {/* Template Preview - Actual CV Image Blurred */}
             <div className="relative">
-              <div className="bg-white p-6 md:p-8 aspect-[3/4] overflow-hidden relative">
-                {/* Fake CV Content - Blurred */}
-                <div className="blur-[6px] select-none pointer-events-none">
-                  {/* Header */}
-                  <div className="border-b-2 border-neutral-300 pb-4 mb-4">
-                    <div className="h-6 bg-neutral-800 w-48 mb-2"></div>
-                    <div className="flex gap-4 text-xs">
-                      <div className="h-3 bg-neutral-400 w-32"></div>
-                      <div className="h-3 bg-neutral-400 w-24"></div>
-                      <div className="h-3 bg-neutral-400 w-28"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Education Section */}
-                  <div className="mb-4">
-                    <div className="h-4 bg-neutral-800 w-24 mb-2"></div>
-                    <div className="h-3 bg-neutral-500 w-full mb-1"></div>
-                    <div className="h-3 bg-neutral-400 w-3/4 mb-1"></div>
-                    <div className="h-3 bg-neutral-400 w-1/2"></div>
-                  </div>
+              <div className="bg-white aspect-[3/4] overflow-hidden relative select-none">
+                {/* Actual CV Preview - Blurred */}
+                <img 
+                  src="/images/cv-preview.webp"
+                  alt="CV Template Preview"
+                  className="w-full h-full object-cover object-top blur-[8px] scale-105 pointer-events-none"
+                  draggable="false"
+                  onContextMenu={(e) => e.preventDefault()}
+                />
 
-                  {/* Experience Section */}
-                  <div className="mb-4">
-                    <div className="h-4 bg-neutral-800 w-28 mb-2"></div>
-                    <div className="h-3 bg-neutral-500 w-full mb-1"></div>
-                    <div className="h-3 bg-neutral-400 w-5/6 mb-1"></div>
-                    <div className="h-3 bg-neutral-400 w-full mb-1"></div>
-                    <div className="h-3 bg-neutral-400 w-2/3"></div>
-                  </div>
-
-                  {/* Skills Section */}
-                  <div className="mb-4">
-                    <div className="h-4 bg-neutral-800 w-20 mb-2"></div>
-                    <div className="flex flex-wrap gap-2">
-                      <div className="h-5 bg-neutral-300 w-16 rounded"></div>
-                      <div className="h-5 bg-neutral-300 w-20 rounded"></div>
-                      <div className="h-5 bg-neutral-300 w-14 rounded"></div>
-                      <div className="h-5 bg-neutral-300 w-18 rounded"></div>
-                      <div className="h-5 bg-neutral-300 w-12 rounded"></div>
-                    </div>
-                  </div>
-
-                  {/* Projects Section */}
-                  <div>
-                    <div className="h-4 bg-neutral-800 w-24 mb-2"></div>
-                    <div className="h-3 bg-neutral-500 w-full mb-1"></div>
-                    <div className="h-3 bg-neutral-400 w-4/5 mb-1"></div>
-                    <div className="h-3 bg-neutral-400 w-full"></div>
-                  </div>
-                </div>
-
-                {/* Overlay with CTA */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-center pb-8">
-                  <div className="text-center">
-                    <p className="text-white font-display font-bold text-lg mb-2">FlyQuest CV Template</p>
-                    <p className="text-neutral-400 text-sm">Enter your email to unlock</p>
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 flex items-end justify-center pb-8">
+                  <div className="text-center px-4">
+                    <p className="text-white font-display font-bold text-xl mb-2">FlyQuest CV Template</p>
+                    <p className="text-neutral-300 text-sm">Enter your email to unlock</p>
                   </div>
                 </div>
               </div>

@@ -1,11 +1,38 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
 export default function PaymentPage() {
+  const [copied, setCopied] = useState(false);
+  const [name, setName] = useState("");
+
+  const copyAccountNumber = () => {
+    navigator.clipboard.writeText("63101880416");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const sendPOPEmail = () => {
+    const reference = name ? `FQ ${name.toUpperCase().split(' ')[0]} CV` : "FQ [NAME] CV";
+    const subject = encodeURIComponent("CV Clarity Call - Proof of Payment");
+    const body = encodeURIComponent(`Hi TK,
+
+I've just made payment for the CV Clarity Call.
+
+Name: ${name || "[Your Name]"}
+Reference Used: ${reference}
+Amount: R440
+
+[Please attach your proof of payment to this email]
+
+Thanks!`);
+    window.location.href = `mailto:tlangi@flyquest.co.za?subject=${subject}&body=${body}`;
+  };
+
   return (
     <main className="min-h-screen bg-black text-white selection:bg-flyquest-gold selection:text-black">
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-50 noise-overlay" aria-hidden="true" />
@@ -95,9 +122,26 @@ export default function PaymentPage() {
                 <span className="text-neutral-400">Account Type:</span>
                 <span className="font-mono">FNB Fusion Aspire</span>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <span className="text-neutral-400">Account Number:</span>
-                <span className="font-mono">63101880416</span>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono">63101880416</span>
+                  <button
+                    onClick={copyAccountNumber}
+                    className="text-flyquest-gold hover:text-white transition-colors p-1"
+                    title="Copy account number"
+                  >
+                    {copied ? (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
               </div>
               <div className="flex justify-between">
                 <span className="text-neutral-400">Branch Code:</span>
@@ -115,17 +159,31 @@ export default function PaymentPage() {
                 <span className="font-mono font-bold">R440.00</span>
               </div>
             </div>
+          </div>
 
-            <div className="mt-6 pt-6 border-t border-flyquest-gold/30">
-              <p className="text-neutral-400 text-sm">
-                After payment, send proof of payment to:
-              </p>
-              <a 
-                href="mailto:tlangi@flyquest.co.za?subject=CV%20Clarity%20Call%20-%20Proof%20of%20Payment&body=Hi%20TK,%0A%0AI've%20just%20made%20payment%20for%20the%20CV%20Clarity%20Call.%0A%0AName:%0AReference%20Used:%20FQ%20[NAME]%20CV%0AAmount:%20R440%0A%0A[Attach%20proof%20of%20payment]"
-                className="text-flyquest-gold font-mono text-lg hover:text-white transition-colors"
+          {/* Send Proof of Payment */}
+          <div className="bg-neutral-950 border border-neutral-800 p-6 mb-8">
+            <p className="text-flyquest-gold font-mono text-sm mb-4">AFTER PAYMENT</p>
+            <p className="text-neutral-400 text-sm mb-4">
+              Enter your name and click below to send your proof of payment:
+            </p>
+            <div className="space-y-4">
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your full name"
+                className="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-flyquest-gold transition-colors font-mono text-sm"
+              />
+              <button
+                onClick={sendPOPEmail}
+                className="w-full bg-flyquest-gold text-black font-display font-bold px-6 py-4 hover:bg-white transition-colors flex items-center justify-center gap-2"
               >
-                tlangi@flyquest.co.za
-              </a>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Send Proof of Payment Email
+              </button>
             </div>
           </div>
 
