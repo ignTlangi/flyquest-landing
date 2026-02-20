@@ -65,9 +65,14 @@ export async function POST(request: NextRequest) {
             </a>
           </div>
 
-          <p style="font-size: 15px; line-height: 1.6; color: #a3a3a3; margin: 0 0 28px 0;">
-            Quick tip: Save your final version as <span style="color: #e5e5e5;">FirstName_LastName_CV.pdf</span> before submitting.
-          </p>
+          <div style="background-color: #141414; padding: 20px; margin: 0 0 28px 0;">
+            <p style="font-size: 14px; color: #ffffff; margin: 0 0 12px 0; font-weight: bold;">Quick tips:</p>
+            <p style="font-size: 14px; line-height: 1.8; color: #a3a3a3; margin: 0;">
+              • Keep it to 1 page (2 max if you have 3+ years experience)<br>
+              • Quantify achievements — numbers catch the eye<br>
+              • Save as PDF: <span style="color: #e5e5e5;">FirstName_LastName_CV.pdf</span>
+            </p>
+          </div>
 
           <div style="background-color: #171717; border-left: 3px solid #ffcf00; padding: 20px; margin: 0 0 28px 0;">
             <p style="font-size: 16px; line-height: 1.5; color: #ffffff; margin: 0 0 12px 0; font-weight: bold;">
