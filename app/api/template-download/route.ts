@@ -41,58 +41,53 @@ export async function POST(request: NextRequest) {
     await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || "FlyQuest <tlangi@flyquest.co.za>",
       to: email,
-      subject: "Your FlyQuest CV Template is here",
+      subject: "Here's the CV template you requested",
       html: `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; background-color: #000000; color: #ffffff;">
-          <h1 style="color: #ffcf00; font-size: 28px; margin-bottom: 24px;">Your CV Template is Ready</h1>
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 500px; margin: 0 auto; padding: 40px 24px; background-color: #0a0a0a; color: #ffffff;">
           
-          <p style="font-size: 16px; line-height: 1.6; color: #e5e5e5; margin-bottom: 20px;">
-            Thanks for downloading The FlyQuest CV Template. This is the same framework I use to help students land interviews.
+          <p style="font-size: 16px; line-height: 1.6; color: #e5e5e5; margin: 0 0 20px 0;">
+            Hey,
           </p>
 
-          <div style="background-color: #171717; border: 1px solid #262626; padding: 24px; margin: 24px 0;">
-            <p style="font-size: 14px; color: #ffcf00; margin: 0 0 12px 0; font-weight: bold;">DOWNLOAD YOUR TEMPLATES:</p>
-            <p style="margin: 0 0 12px 0;">
-              <a href="https://flyquest.co.za/downloads/FlyQuest-CV-Template-General.docx" style="color: #ffcf00; text-decoration: none; font-size: 16px;">
-                → General CV Template (Word)
-              </a>
-            </p>
-            <p style="margin: 0;">
-              <a href="https://flyquest.co.za/downloads/FlyQuest-CV-Template-Tech.docx" style="color: #ffcf00; text-decoration: none; font-size: 16px;">
-                → Tech/IT CV Template (Word)
-              </a>
-            </p>
-          </div>
-          
-          <p style="font-size: 16px; line-height: 1.6; color: #a3a3a3; margin-bottom: 20px;">
-            <strong style="color: #ffffff;">Quick tips for using the template:</strong>
+          <p style="font-size: 16px; line-height: 1.6; color: #e5e5e5; margin: 0 0 24px 0;">
+            Thanks for downloading. Here are your templates:
           </p>
-          
-          <ul style="font-size: 15px; line-height: 1.8; color: #a3a3a3; padding-left: 20px; margin-bottom: 24px;">
-            <li>Keep it to 1-2 pages max</li>
-            <li>Use keywords from the job description</li>
-            <li>Quantify your achievements where possible</li>
-            <li>Save as PDF when submitting (FirstName_LastName_CV.pdf)</li>
-          </ul>
 
-          <div style="border-left: 3px solid #ffcf00; padding-left: 20px; margin: 32px 0;">
-            <p style="font-size: 15px; color: #e5e5e5; margin: 0 0 12px 0;">
-              <strong>Want personalised feedback on your CV?</strong>
-            </p>
-            <p style="font-size: 14px; color: #a3a3a3; margin: 0;">
-              Book a CV Clarity Call and get a detailed video breakdown tailored to your target role.
-            </p>
-            <p style="margin: 16px 0 0 0;">
-              <a href="https://flyquest.co.za/cv#paid" style="color: #ffcf00; text-decoration: none;">
-                Learn more →
-              </a>
-            </p>
+          <div style="margin: 0 0 12px 0;">
+            <a href="https://flyquest.co.za/downloads/FlyQuest-CV-Template-General.docx" style="display: inline-block; background-color: #ffcf00; color: #000000; padding: 12px 24px; text-decoration: none; font-weight: bold; font-size: 14px;">
+              Download General Template
+            </a>
           </div>
           
-          <p style="font-size: 14px; color: #525252; margin-top: 40px;">
+          <div style="margin: 0 0 28px 0;">
+            <a href="https://flyquest.co.za/downloads/FlyQuest-CV-Template-Tech.docx" style="display: inline-block; background-color: transparent; color: #ffcf00; padding: 12px 24px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #ffcf00;">
+              Download Tech Template
+            </a>
+          </div>
+
+          <p style="font-size: 15px; line-height: 1.6; color: #a3a3a3; margin: 0 0 28px 0;">
+            Quick tip: Save your final version as <span style="color: #e5e5e5;">FirstName_LastName_CV.pdf</span> before submitting.
+          </p>
+
+          <div style="background-color: #171717; border-left: 3px solid #ffcf00; padding: 20px; margin: 0 0 28px 0;">
+            <p style="font-size: 16px; line-height: 1.5; color: #ffffff; margin: 0 0 12px 0; font-weight: bold;">
+              Still not getting callbacks?
+            </p>
+            <p style="font-size: 14px; line-height: 1.5; color: #a3a3a3; margin: 0 0 16px 0;">
+              I'll personally review your CV and record a video showing you exactly what to fix. 48-hour turnaround.
+            </p>
+            <a href="https://flyquest.co.za/cv#paid" style="display: inline-block; background-color: #ffcf00; color: #000000; padding: 12px 24px; text-decoration: none; font-weight: bold; font-size: 14px;">
+              Book a CV Clarity Call — R440
+            </a>
+          </div>
+          
+          <p style="font-size: 14px; color: #737373; margin: 0 0 0 0; line-height: 1.5;">
             — TK<br>
-            Founder, FlyQuest<br>
-            <a href="mailto:tlangi@flyquest.co.za" style="color: #525252;">tlangi@flyquest.co.za</a>
+            <span style="font-size: 13px; color: #525252;">tlangi@flyquest.co.za</span>
+          </p>
+
+          <p style="font-size: 12px; color: #525252; margin: 28px 0 0 0;">
+            If this landed in Promotions, move it to Primary so you don't miss anything.
           </p>
         </div>
       `,

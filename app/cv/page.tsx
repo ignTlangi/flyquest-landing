@@ -193,7 +193,7 @@ export default function CVPage() {
                 2
               </div>
               <h3 className="font-display font-bold mb-2">Pay</h3>
-              <p className="text-neutral-500 text-sm">Complete secure payment via Yoco</p>
+              <p className="text-neutral-500 text-sm">Complete payment via EFT</p>
             </div>
 
             <div className="text-center">
