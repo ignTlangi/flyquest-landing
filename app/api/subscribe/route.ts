@@ -79,12 +79,32 @@ export async function POST(request: NextRequest) {
             <span style="font-size: 13px; color: #525252;">tlangi@flyquest.co.za</span>
           </p>
 
-          <p style="font-size: 12px; color: #525252; margin: 28px 0 0 0;">
-            If this landed in Promotions, move it to Primary so you don't miss anything.
-          </p>
+          <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid #333;">
+            <p style="font-size: 11px; color: #525252; margin: 0;">
+              You received this because you joined the FlyQuest mailing list.<br>
+              <a href="mailto:tlangi@flyquest.co.za?subject=Unsubscribe&body=Please remove me from the FlyQuest mailing list. Email: ${email}" style="color: #525252;">Unsubscribe</a> · 
+              <a href="https://flyquest.co.za/privacy" style="color: #525252;">Privacy Policy</a>
+            </p>
+          </div>
         </div>
       `,
     });
+
+    // Send admin notification if enabled
+    if (process.env.SEND_ADMIN_NOTIFICATION === 'true' && process.env.ADMIN_EMAIL) {
+      await resend.emails.send({
+        from: process.env.RESEND_FROM_EMAIL || "FlyQuest <tlangi@flyquest.co.za>",
+        to: process.env.ADMIN_EMAIL,
+        subject: `📬 New FlyQuest subscriber: ${email}`,
+        html: `
+          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px;">
+            <p><strong>New subscriber</strong></p>
+            <p>Email: ${email}</p>
+            <p>Time: ${new Date().toLocaleString('en-ZA', { timeZone: 'Africa/Johannesburg' })}</p>
+          </div>
+        `,
+      });
+    }
 
     // Log for analytics
     console.log(`[FlyQuest] New subscriber: ${email} at ${new Date().toISOString()}`);

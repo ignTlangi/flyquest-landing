@@ -44,9 +44,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom: Copyright */}
-        <div className="mt-6 pt-6 border-t border-neutral-900 text-center">
+        {/* Bottom: Copyright + Legal */}
+        <div className="mt-6 pt-6 border-t border-neutral-900 flex flex-col sm:flex-row justify-between items-center gap-4">
           <span className="text-neutral-600 text-sm">© 2025 FlyQuest</span>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="text-neutral-600 hover:text-neutral-400 transition-colors text-xs">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-neutral-600 hover:text-neutral-400 transition-colors text-xs">
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
